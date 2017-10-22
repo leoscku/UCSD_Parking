@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html class="dj_webkit dj_chrome dj_contentbox esriLTR" dir="ltr" lang="en-us"><head>
+  <title>Parking Structure</title>
+  <meta charset="utf-8">
+  <meta name="fragment" content="!">
+  <!-- Responsive -->
+  <meta name="viewport" content="width=device-width" ,="" initial-scale="1">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <!-- End Responsive -->
+  <link rel="stylesheet" href="https://js.arcgis.com/3.22/esri/themes/calcite/dijit/calcite.css">
+
+  <link rel="stylesheet" href="https://js.arcgis.com/3.22/esri/css/esri.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+<link rel="stylesheet" type="text/css" href="css/theme/default.css"><style>.esriSimpleSlider{color:rgba(255, 255, 255, 0.9);} .icon-color{color:rgba(255, 255, 255, 0.9);}  .LocateButton .zoomLocateButton{color:rgba(255, 255, 255, 0.9);} .searchIcon{color:rgba(255, 255, 255, 0.9);} .pageNav{color:rgba(255, 255, 255, 0.9);} .bg{background-color:rgba(16, 94, 120, 0.9);} .esriPopup .pointer{background-color:rgba(16, 94, 120, 0.9);} .esriPopup.light .titlePane, .esriPopup.dark .titlePane{ background-color:rgba(16, 94, 120, 0.9); color:rgba(255, 255, 255, 0.9);}  .esriPopup.light .titleButton, .esriPopup.dark .titleButton{color:rgba(255, 255, 255, 0.9);} .fc{color:rgba(255, 255, 255, 0.9);} .pageContent{background-color:rgba(255, 255, 255, 0.9);} .pageBody{ background: rgba(255, 255, 255, 0.9); color:rgba(0, 0, 0, 0.9);}  .dijitTabPaneWrapper{background:rgba(255, 255, 255, 0.9);} .esriLayerList .esriTitle{background-color:rgba(255, 255, 255, 0.9);} .esriLayer{background-color:rgba(255, 255, 255, 0.9);}.esriLayerList .esriContainer{background-color:rgba(255, 255, 255, 0.9);} .esriLayerList .esriContainer{background-color:rgba(255, 255, 255, 0.9);} .esriLayerList .esriList{background-color:rgba(255, 255, 255, 0.9); color:rgba(0, 0, 0, 0.9);} #modal .copy{background-color:rgba(255, 255, 255, 0.9); color:rgba(0, 0, 0, 0.9);}   .templatePicker .grid .dojoxGridCell, .dojoxGridRow, .dojoxGridCelll, .templatePicker .grid .dojoxGridRowOdd, .templatePicker .grid .dojoxGridRowEven, .dojoxGridView, .templatePicker .dojoxGrid{ background-color:rgba(255, 255, 255, 0.9) !important; border:transparent;} </style></head>
+
+<body class="calcite no-touch">
+  <div>
+    <!-- Loading Indicator -->
+    <div class="loading-indicator" role="presentation">
+      <div class="loading-message" id="loading_message"></div>
+    </div>
+    <!-- Map -->
+    <div id="mapDiv" dir="ltr" class="map" data-zoom="17" data-scale="4513.988705" data-loaded="" aria-label="mymap1" tabindex="0">
+      <div id="locateDiv"></div>
+    <div id="mapDiv_root" class="esriMapContainer" style="width: 412px; height: 660px; direction: ltr;"><div id="mapDiv_container" class="esriMapContainer" style="position: absolute; cursor: default; user-select: none; clip: auto;"><div id="mapDiv_layers" class="esriMapLayers" style="left: 0px; top: 0px;"><div id="mapDiv_OpenStreetMap" style="position: absolute; width: 412px; height: 660px; overflow: visible; transform: translate(-578px, -1238px); display: block;"><div style="position: absolute; width: 412px; height: 660px; overflow: visible; transition: -webkit-transform 500ms ease;"><img id="mapDiv_OpenStreetMap_tile_17_0_0" alt="" class="layerTile" src="https://a.tile.openstreetmap.org/17/22848/52845.png" style="width: 256px; height: 256px; visibility: inherit; transform: translate(575px, 1184px);"><img id="mapDiv_OpenStreetMap_tile_17_1_0" alt="" class="layerTile" src="https://b.tile.openstreetmap.org/17/22848/52846.png" style="width: 256px; height: 256px; visibility: inherit; transform: translate(575px, 1440px);"><img id="mapDiv_OpenStreetMap_tile_17_2_0" alt="" class="layerTile" src="https://c.tile.openstreetmap.org/17/22848/52847.png" style="width: 256px; height: 256px; visibility: inherit; transform: translate(575px, 1696px);"><img id="mapDiv_OpenStreetMap_tile_17_0_1" alt="" class="layerTile" src="https://a.tile.openstreetmap.org/17/22849/52845.png" style="width: 256px; height: 256px; visibility: inherit; transform: translate(831px, 1184px);"><img id="mapDiv_OpenStreetMap_tile_17_1_1" alt="" class="layerTile" src="https://b.tile.openstreetmap.org/17/22849/52846.png" style="width: 256px; height: 256px; visibility: inherit; transform: translate(831px, 1440px);"><img id="mapDiv_OpenStreetMap_tile_17_2_1" alt="" class="layerTile" src="https://c.tile.openstreetmap.org/17/22849/52847.png" style="width: 256px; height: 256px; visibility: inherit; transform: translate(831px, 1696px);"></div></div><svg overflow="hidden" width="412" height="660" id="mapDiv_gc" style="touch-action: none; will-change: transform; overflow: visible; position: absolute; transform: translate(0px, 3px);"><g id="csv_4036_0_layer" data-geometry-type="point" style="display: block;"><g></g><circle fill="rgb(77, 77, 77)" fill-opacity="1" stroke="rgb(255, 255, 255)" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" cx="263" cy="614" r="8" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,0.00000000,0.00000000)" fill-rule="evenodd" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></circle></g><defs></defs><g id="mapDiv_graphics_layer" style="display: block;"><g></g></g></svg></div></div><div class="esriControlsBR"><span class="esriAttribution" tabindex="0" style="max-width: 185px; cursor: pointer;"><span class="esriAttributionList"><span class="esriAttributionLastItem" style="display: inline;">Map data © OpenStreetMap contributors, CC-BY-SA<span class="esriAttributionDelim"> | </span></span></span></span><div tabindex="0" title="Esri" class="logo-med"></div></div><div class="esriPopup light esriPopupHidden" style="left: 587px; top: 422px;"><div class="esriPopupWrapper" style="position: absolute; top: -134px; left: 16px;"><div class="sizer" style="width: 206px;"><div class="titlePane" style="user-select: none;"><div class="spinner hidden" title="Searching..."></div><div class="title" tabindex="0">&nbsp;</div><div class="titleButton prev hidden" title="Previous feature" role="button" tabindex="0"></div><div class="titleButton next hidden" title="Next feature" role="button" tabindex="0"></div><div class="titleButton maximize" title="Maximize" role="button" tabindex="0"></div><div class="titleButton close" title="Close" role="button" tabindex="0"></div></div></div><div class="sizer content" style="width: 206px;"><div class="contentPane" style="max-height: 231px;"><div style="text-align: center;">No information available.</div></div></div><div class="sizer" style="width: 206px;"><div class="actionsPane"><div class="actionList hidden"><a title="Zoom to" class="action zoomTo" href="javascript:void(0);"><span>Zoom to</span></a></div></div></div><div class="pointer"></div></div><div class="outerPointer left"></div></div><div id="mapDiv_zoom_slider" class="esriSimpleSlider esriSimpleSliderVertical esriSimpleSliderTL homeEnabled" style="z-index: 30; background-color: rgba(16, 94, 120, 0.9);"><div class="esriSimpleSliderIncrementButton" tabindex="0" role="button" title="Zoom In"><span aria-hidden="true" role="presentation">+</span><span class="esriIconFallbackText">Zoom In</span></div><div class="HomeButton" role="presentation" id="esri_dijit_HomeButton_0" widgetid="esri_dijit_HomeButton_0" style="display: block;">
+    <div class="homeContainer">
+            <div data-dojo-attach-point="_homeNode" title="Default extent" role="button" class="home" tabindex="0"><span aria-hidden="true" role="presentation">Home</span><span class="icon-home" aria-label="Default extent"></span></div>
+    </div>
+</div><div class="esriSimpleSliderDecrementButton" tabindex="0" role="button" title="Zoom Out"><span aria-hidden="true" role="presentation">−</span><span class="esriIconFallbackText">Zoom Out</span></div></div></div></div>
+    <!-- Panel Top -->
+    <div id="panelTop" class="bg shadow">
+      <!-- Panel Title -->
+      <div id="panelTitle">
+        <header class="fc" id="panelText" role="banner">
+          <hgroup>
+            <h1 id="title" class="nosubtitle">Parking Structure</h1>
+            <h2 id="subtitle" style="display: none;"></h2>
+          </hgroup>
+        </header>
+        <div role="search" id="panelSearch">
+          <div id="panelGeocoder"><div role="presentation" class="arcgisSearch" id="search" widgetid="search" style="display: block;">
+  <div role="presentation" class="searchGroup searchCollapsed hasButtonMode" data-dojo-attach-point="containerNode">
+    <div data-dojo-attach-point="expandNode" class="searchExpandContainer">
+      <div class="searchAnimate">
+        <div role="button" title="Search in" id="search_menu_button" class="searchBtn searchToggle" tabindex="0" data-dojo-attach-point="sourcesBtnNode">
+          <span aria-hidden="true" role="presentation" class="searchIcon esri-icon-down-arrow"></span><span class="sourceName" data-dojo-attach-point="sourceNameNode">Esri World Geocoder</span>
+        </div>
+        <div class="searchInputGroup">
+          <form data-dojo-attach-point="formNode">
+            <input maxlength="128" autocomplete="off" type="text" tabindex="0" class="searchInput" value="" aria-haspopup="true" id="search_input" data-dojo-attach-point="inputNode" role="textbox" placeholder="" title="">
+          </form>
+          <div role="button" class="searchClear" tabindex="0" data-dojo-attach-point="clearNode" title=""><span aria-hidden="true" class="searchIcon esri-icon-close searchClose"></span><span aria-hidden="true" class="searchIcon esri-icon-loading-indicator searchSpinner"></span>
+          </div>
+          <div data-dojo-attach-point="suggestionsNode" class="searchMenu suggestionsMenu"><div><ul role="menu"><li data-index="0" data-source-index="0" role="menuitem" tabindex="0"><strong>UCSD</strong> Theater, 2910 La Jolla Village Dr, La Jolla, CA, 92093, USA</li><li data-index="1" data-source-index="0" role="menuitem" tabindex="0"><strong>UCSD</strong> Medical Center-Hillcrest, 200 W Arbor Dr, San Diego, CA, 92103, USA</li><li data-index="2" data-source-index="0" role="menuitem" tabindex="0"><strong>UCSD</strong> Medical Center-Hillcrest-ER, 200 W Arbor Dr, San Diego, CA, 92103, USA</li><li data-index="3" data-source-index="0" role="menuitem" tabindex="0"><strong>UCSD</strong> Mail Services, 9450 Gilman Dr, La Jolla, CA, 92092, USA</li><li data-index="4" data-source-index="0" role="menuitem" tabindex="0"><strong>UCSD</strong>, 9500 Gilman Dr, La Jolla, CA, 92093, USA</li><li data-index="5" data-source-index="0" role="menuitem" tabindex="0"><strong>Ucsd</strong> Acc Pharmacy, 9275 Pipilo St, San Diego, CA, 92129, USA</li></ul></div></div>
+        </div>
+      </div>
+    </div>
+    <div role="button" title="Search" class="searchBtn searchSubmit" tabindex="0" data-dojo-attach-point="submitNode">
+      <span aria-hidden="true" role="presentation" class="searchIcon esri-icon-search"></span>
+      <span class="searchButtonText">Search</span>
+    </div>
+    <div data-dojo-attach-point="sourcesNode" class="searchMenu sourcesMenu"></div>
+    <div data-dojo-attach-point="noResultsMenuNode" class="searchMenu noResultsMenu"></div>
+    <div class="searchClearFloat"></div>
+  </div>
+</div></div>
+        </div>
+        <div id="panelMenu" class="icon-menu icon-color" style="color: rgb(255, 255, 255);"></div>
+      </div>
+      <!-- Panel Tools -->
+      <div role="toolbar" id="panelTools" class="bg fc">
+        <!--Tools are created programatically-->
+      <button class="panelTool" role="button" name="layers" title="Layers" id="panelTool_layers" tabindex="0"><span aria-hidden="true" class="icon-color toolbar-icons icon-layers" style="color: rgb(255, 255, 255);"></span></button><button class="panelTool" role="button" name="basemap" title="Basemap gallery" id="panelTool_basemap"><span aria-hidden="true" class="icon-color toolbar-icons icon-basemap" style="color: rgb(255, 255, 255);"></span></button><button class="panelTool" role="button" name="print" title="Print" id="panelTool_print"><span aria-hidden="true" class="icon-color toolbar-icons icon-print" style="color: rgb(255, 255, 255);"></span></button><button class="panelTool" role="button" name="share" title="Share" id="panelTool_share"><span aria-hidden="true" class="icon-color toolbar-icons icon-share" style="color: rgb(255, 255, 255);"></span></button></div>
+    </div>
+    <!-- Panel Content -->
+    <div id="panelContent" style="top: 90px;">
+      <div id="panelPages" style="visibility: visible;"><div class="page hide" id="page_layers"><div class="pageContent shadow small" id="pageContent_layers" tabindex="-1" role="dialog" aria-label="layers" aria-live="polite"><header id="pageHeader_layers" aria-labelledby="pagetitle_layers" class="pageHeader bg"><h3 class="pageTitle fc" aria-label="layers" id="pagetitle_layers">Layers</h3><div class="pageHeaderImg" title="layers" role="presentation"><span aria-hidden="true" class="pageIcon icon-color icon-layers" style="color: rgb(255, 255, 255);"></span></div><button class="pageNav pageClose" role="button" name="layers" id="close_layers" aria-label="Close layers" title="Close layers"></button><button class="pageNav pageUp" role="button" aria-label="Previous" title="Previous"></button><button class="pageNav pageDown" role="button" aria-label="Next" title="Next"></button></header><div class="pageBody" tabindex="0" title="layers" id="pageBody_layers"><div class="esriLayerList" role="presentation" id="dijit__TemplatedMixin_0" widgetid="dijit__TemplatedMixin_0" style="display: block;">
+  <div role="menu" data-dojo-attach-point="_container" class="esriContainer">
+    <ul role="group" class="esriList" data-dojo-attach-point="_layersNode"><li role="menuitem" class="esriLayer esriListVisible esriHasTabContent esriTabMenuVisible"><div class="esriTitle"><div class="esriTitleContainer"><input type="checkbox" id="dijit__TemplatedMixin_0_checkbox_0" data-layer-index="0" class="esriCheckbox"><div tabindex="0" role="button" data-layer-index="0" title="Expand" class="esriToggleButton esri-icon-right"></div><label class="esriLabel" for="dijit__TemplatedMixin_0_checkbox_0">Book1</label><div class="esriClear"></div></div></div><div class="esriTabContainer"><ul role="tablist" class="esriTabMenu esriClearFix"><li tabindex="0" role="tab" class="esriTabMenuItem esriTabMenuSelected" data-layer-index="0" data-tab-id="legend">Legend</li><li tabindex="0" data-tab-id="opacity" role="tab" class="esriTabMenuItem" data-layer-index="0">Opacity</li></ul><div class="esriTabs"><div role="tabpanel" data-tab-id="legend" class="esriTab esriLegend esriTabSelected"><div id="esri_dijit_Legend_0" widgetid="esri_dijit_Legend_0" style="position: relative;"><div id="esri_dijit_Legend_0_csv_4036_0" class="esriLegendService" style="display: block;"><table width="95%"><tbody><tr><td align="left"><span class="esriLegendServiceLabel">Book1</span></td></tr></tbody></table><div id="esri_dijit_Legend_0_csv_4036_0_fc_csv_4036_0" class="" style="display: block;"><table width="95%" class="esriLegendLayerLabel"><tbody><tr><td align="left"></td></tr></tbody></table><table cellpadding="0" cellspacing="0" width="95%" class="esriLegendLayer"><tbody><tr><td width="35" align="center"><div style="width:30px;height:30px;"><svg overflow="hidden" width="30" height="30" style="touch-action: none;"><defs></defs><circle fill="rgb(77, 77, 77)" fill-opacity="1" stroke="rgb(255, 255, 255)" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" cx="0" cy="0" r="8" fill-rule="evenodd" stroke-dasharray="none" dojoGfxStrokeStyle="solid" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,15.00000000,15.00000000)"></circle></svg></div></td><td><table width="95%"><tbody><tr><td align="left"></td></tr></tbody></table></td></tr></tbody></table></div></div><div id="esri_dijit_Legend_0_msg" class="esriLegendMsg" style="display: none;">No legend</div></div></div><div role="tabpanel" data-tab-id="opacity" class="esriTab esriSlider"><table class="dijit dijitReset dijitSlider dijitSliderH" cellspacing="0" cellpadding="0" border="0" rules="none" data-dojo-attach-event="onkeydown:_onKeyDown, onkeyup:_onKeyUp" role="presentation" id="dijit_form_HorizontalSlider_0" widgetid="dijit_form_HorizontalSlider_0"><tbody><tr class="dijitReset"><td class="dijitReset" colspan="2"></td><td data-dojo-attach-point="topDecoration" class="dijitReset dijitSliderDecoration dijitSliderDecorationT dijitSliderDecorationH"></td><td class="dijitReset" colspan="2"></td></tr><tr class="dijitReset"><td class="dijitReset dijitSliderButtonContainer dijitSliderButtonContainerH"><div class="dijitSliderDecrementIconH" style="display:none" data-dojo-attach-point="decrementButton"><span class="dijitSliderButtonInner">-</span></div></td><td class="dijitReset"><div class="dijitSliderBar dijitSliderBumper dijitSliderBumperH dijitSliderLeftBumper" data-dojo-attach-event="press:_onClkDecBumper"></div></td><td class="dijitReset"><input data-dojo-attach-point="valueNode" type="hidden" value="1"><div class="dijitReset dijitSliderBarContainerH" role="presentation" data-dojo-attach-point="sliderBarContainer"><div role="presentation" data-dojo-attach-point="progressBar" class="dijitSliderBar dijitSliderBarH dijitSliderProgressBar dijitSliderProgressBarH" data-dojo-attach-event="press:_onBarClick" style="width: 100%;"><div class="dijitSliderMoveable dijitSliderMoveableH"><div data-dojo-attach-point="sliderHandle,focusNode" class="dijitSliderImageHandle dijitSliderImageHandleH" data-dojo-attach-event="press:_onHandleClick" role="slider" aria-valuemin="0.1" aria-valuemax="1" tabindex="0" aria-valuenow="1" style="touch-action: none;"></div></div></div><div role="presentation" data-dojo-attach-point="remainingBar" class="dijitSliderBar dijitSliderBarH dijitSliderRemainingBar dijitSliderRemainingBarH" data-dojo-attach-event="press:_onBarClick" style="width: 0%;"></div></div></td><td class="dijitReset"><div class="dijitSliderBar dijitSliderBumper dijitSliderBumperH dijitSliderRightBumper" data-dojo-attach-event="press:_onClkIncBumper"></div></td><td class="dijitReset dijitSliderButtonContainer dijitSliderButtonContainerH"><div class="dijitSliderIncrementIconH" style="display:none" data-dojo-attach-point="incrementButton"><span class="dijitSliderButtonInner">+</span></div></td></tr><tr class="dijitReset"><td class="dijitReset" colspan="2"></td><td data-dojo-attach-point="containerNode,bottomDecoration" class="dijitReset dijitSliderDecoration dijitSliderDecorationB dijitSliderDecorationH"></td><td class="dijitReset" colspan="2"></td></tr></tbody></table><div class="esriSliderLabels" id="dijit_form_HorizontalRuleLabels_0" widgetid="dijit_form_HorizontalRuleLabels_0"><div class="dijitRuleLabelContainer dijitRuleLabelContainerH" style="left:0%;"><div class="dijitRuleLabel dijitRuleLabelH">0</div></div><div class="dijitRuleLabelContainer dijitRuleLabelContainerH" style="left:50%;"><div class="dijitRuleLabel dijitRuleLabelH">50</div></div><div class="dijitRuleLabelContainer dijitRuleLabelContainerH" style="left:100%;"><div class="dijitRuleLabel dijitRuleLabelH">100</div></div></div></div></div></div></li></ul>
+    <div class="esriNoLayersText" data-dojo-attach-point="_noLayersNode"></div>
+  </div>
+</div></div></div></div><div class="page hide" id="page_basemap"><div class="pageContent shadow large" id="pageContent_basemap" tabindex="-1" role="dialog" aria-label="basemap" aria-live="polite"><header id="pageHeader_basemap" aria-labelledby="pagetitle_basemap" class="pageHeader bg"><h3 class="pageTitle fc" aria-label="basemap" id="pagetitle_basemap">Basemap gallery</h3><div class="pageHeaderImg" title="basemap" role="presentation"><span aria-hidden="true" class="pageIcon icon-color icon-basemap" style="color: rgb(255, 255, 255);"></span></div><button class="pageNav pageClose" role="button" name="basemap" id="close_basemap" aria-label="Close basemap" title="Close basemap"></button><button class="pageNav pageUp" role="button" aria-label="Previous" title="Previous"></button><button class="pageNav pageDown" role="button" aria-label="Next" title="Next"></button></header><div class="pageBody" tabindex="0" title="basemap" id="pageBody_basemap"><div class="esriBasemapGallery" id="basemapGallery" widgetid="basemapGallery">
+  <div dojoattachpoint="flowContainer"><div id="galleryNode_basemap_11" class="esriBasemapGalleryNode"><a href="javascript:void(0);"><img class="esriBasemapGalleryThumbnail" src="https://www.arcgis.com/sharing/rest/content/items/86de95d4e0244cba80f0fa2c9403a7b2/info/thumbnail/tempimagery.jpg?token=TjFmE8-8u4js7j9xDzQscMkXMzIHBQXDooU3fl_u7uzUpaPvsX4OoGpRTq1pI3UXCTxS7MYqABLnsm1WwXvwBvqbqrQTKH_MjITN2fE86MMK3VN1fZgCCw1XpClo9u2gBYNkyBfm4eGEUGxTw8ny5gTpLKBdF_QA_CQh0RYMt6d-S5wSzC-00EKuNre0kDt1" title="Imagery" alt="Imagery"></a><div class="esriBasemapGalleryLabelContainer"><span alt="Imagery" title="Imagery">Imagery</span></div></div><div id="galleryNode_basemap_10" class="esriBasemapGalleryNode"><a href="javascript:void(0);"><img class="esriBasemapGalleryThumbnail" src="https://www.arcgis.com/sharing/rest/content/items/413fd05bbd7342f5991d5ec96f4f8b18/info/thumbnail/imagery_labels.jpg?token=TjFmE8-8u4js7j9xDzQscMkXMzIHBQXDooU3fl_u7uzUpaPvsX4OoGpRTq1pI3UXCTxS7MYqABLnsm1WwXvwBvqbqrQTKH_MjITN2fE86MMK3VN1fZgCCw1XpClo9u2gBYNkyBfm4eGEUGxTw8ny5gTpLKBdF_QA_CQh0RYMt6d-S5wSzC-00EKuNre0kDt1" title="Imagery with Labels" alt="Imagery with Labels"></a><div class="esriBasemapGalleryLabelContainer"><span alt="Imagery with Labels" title="Imagery with Labels">Imagery with Labels</span></div></div><div id="galleryNode_basemap_9" class="esriBasemapGalleryNode"><a href="javascript:void(0);"><img class="esriBasemapGalleryThumbnail" src="https://www.arcgis.com/sharing/rest/content/items/d8855ee4d3d74413babfb0f41203b168/info/thumbnail/world_street_map.jpg?token=TjFmE8-8u4js7j9xDzQscMkXMzIHBQXDooU3fl_u7uzUpaPvsX4OoGpRTq1pI3UXCTxS7MYqABLnsm1WwXvwBvqbqrQTKH_MjITN2fE86MMK3VN1fZgCCw1XpClo9u2gBYNkyBfm4eGEUGxTw8ny5gTpLKBdF_QA_CQh0RYMt6d-S5wSzC-00EKuNre0kDt1" title="Streets" alt="Streets"></a><div class="esriBasemapGalleryLabelContainer"><span alt="Streets" title="Streets">Streets</span></div></div><div id="galleryNode_basemap_8" class="esriBasemapGalleryNode"><a href="javascript:void(0);"><img class="esriBasemapGalleryThumbnail" src="https://www.arcgis.com/sharing/rest/content/items/6e03e8c26aad4b9c92a87c1063ddb0e3/info/thumbnail/topo_map_2.jpg?token=TjFmE8-8u4js7j9xDzQscMkXMzIHBQXDooU3fl_u7uzUpaPvsX4OoGpRTq1pI3UXCTxS7MYqABLnsm1WwXvwBvqbqrQTKH_MjITN2fE86MMK3VN1fZgCCw1XpClo9u2gBYNkyBfm4eGEUGxTw8ny5gTpLKBdF_QA_CQh0RYMt6d-S5wSzC-00EKuNre0kDt1" title="Topographic" alt="Topographic"></a><div class="esriBasemapGalleryLabelContainer"><span alt="Topographic" title="Topographic">Topographic</span></div></div><div id="galleryNode_basemap_7" class="esriBasemapGalleryNode"><a href="javascript:void(0);"><img class="esriBasemapGalleryThumbnail" src="https://www.arcgis.com/sharing/rest/content/items/25869b8718c0419db87dad07de5b02d8/info/thumbnail/DGCanvasBase.png?token=TjFmE8-8u4js7j9xDzQscMkXMzIHBQXDooU3fl_u7uzUpaPvsX4OoGpRTq1pI3UXCTxS7MYqABLnsm1WwXvwBvqbqrQTKH_MjITN2fE86MMK3VN1fZgCCw1XpClo9u2gBYNkyBfm4eGEUGxTw8ny5gTpLKBdF_QA_CQh0RYMt6d-S5wSzC-00EKuNre0kDt1" title="Dark Gray Canvas" alt="Dark Gray Canvas"></a><div class="esriBasemapGalleryLabelContainer"><span alt="Dark Gray Canvas" title="Dark Gray Canvas">Dark Gray Canvas</span></div></div><div id="galleryNode_basemap_6" class="esriBasemapGalleryNode"><a href="javascript:void(0);"><img class="esriBasemapGalleryThumbnail" src="https://www.arcgis.com/sharing/rest/content/items/8b3b470883a744aeb60e5fff0a319ce7/info/thumbnail/light_gray_canvas.jpg?token=TjFmE8-8u4js7j9xDzQscMkXMzIHBQXDooU3fl_u7uzUpaPvsX4OoGpRTq1pI3UXCTxS7MYqABLnsm1WwXvwBvqbqrQTKH_MjITN2fE86MMK3VN1fZgCCw1XpClo9u2gBYNkyBfm4eGEUGxTw8ny5gTpLKBdF_QA_CQh0RYMt6d-S5wSzC-00EKuNre0kDt1" title="Light Gray Canvas" alt="Light Gray Canvas"></a><div class="esriBasemapGalleryLabelContainer"><span alt="Light Gray Canvas" title="Light Gray Canvas">Light Gray Canvas</span></div></div><div id="galleryNode_basemap_5" class="esriBasemapGalleryNode"><a href="javascript:void(0);"><img class="esriBasemapGalleryThumbnail" src="https://www.arcgis.com/sharing/rest/content/items/509e2d6b034246d692a461724ae2d62c/info/thumbnail/natgeo.jpg?token=TjFmE8-8u4js7j9xDzQscMkXMzIHBQXDooU3fl_u7uzUpaPvsX4OoGpRTq1pI3UXCTxS7MYqABLnsm1WwXvwBvqbqrQTKH_MjITN2fE86MMK3VN1fZgCCw1XpClo9u2gBYNkyBfm4eGEUGxTw8ny5gTpLKBdF_QA_CQh0RYMt6d-S5wSzC-00EKuNre0kDt1" title="National Geographic" alt="National Geographic"></a><div class="esriBasemapGalleryLabelContainer"><span alt="National Geographic" title="National Geographic">National Geographic</span></div></div><div id="galleryNode_basemap_4" class="esriBasemapGalleryNode"><a href="javascript:void(0);"><img class="esriBasemapGalleryThumbnail" src="https://www.arcgis.com/sharing/rest/content/items/aab054ab883c4a4094c72e949566ad40/info/thumbnail/terrain_labels.jpg?token=TjFmE8-8u4js7j9xDzQscMkXMzIHBQXDooU3fl_u7uzUpaPvsX4OoGpRTq1pI3UXCTxS7MYqABLnsm1WwXvwBvqbqrQTKH_MjITN2fE86MMK3VN1fZgCCw1XpClo9u2gBYNkyBfm4eGEUGxTw8ny5gTpLKBdF_QA_CQh0RYMt6d-S5wSzC-00EKuNre0kDt1" title="Terrain with Labels" alt="Terrain with Labels"></a><div class="esriBasemapGalleryLabelContainer"><span alt="Terrain with Labels" title="Terrain with Labels">Terrain with Labels</span></div></div><div id="galleryNode_basemap_3" class="esriBasemapGalleryNode"><a href="javascript:void(0);"><img class="esriBasemapGalleryThumbnail" src="https://www.arcgis.com/sharing/rest/content/items/48b8cec7ebf04b5fbdcaf70d09daff21/info/thumbnail/tempoceans.jpg?token=TjFmE8-8u4js7j9xDzQscMkXMzIHBQXDooU3fl_u7uzUpaPvsX4OoGpRTq1pI3UXCTxS7MYqABLnsm1WwXvwBvqbqrQTKH_MjITN2fE86MMK3VN1fZgCCw1XpClo9u2gBYNkyBfm4eGEUGxTw8ny5gTpLKBdF_QA_CQh0RYMt6d-S5wSzC-00EKuNre0kDt1" title="Oceans" alt="Oceans"></a><div class="esriBasemapGalleryLabelContainer"><span alt="Oceans" title="Oceans">Oceans</span></div></div><div id="galleryNode_basemap_2" class="esriBasemapGalleryNode"><a href="javascript:void(0);"><img class="esriBasemapGalleryThumbnail" src="https://www.arcgis.com/sharing/rest/content/items/5d2bfa736f8448b3a1708e1f6be23eed/info/thumbnail/temposm.jpg?token=TjFmE8-8u4js7j9xDzQscMkXMzIHBQXDooU3fl_u7uzUpaPvsX4OoGpRTq1pI3UXCTxS7MYqABLnsm1WwXvwBvqbqrQTKH_MjITN2fE86MMK3VN1fZgCCw1XpClo9u2gBYNkyBfm4eGEUGxTw8ny5gTpLKBdF_QA_CQh0RYMt6d-S5wSzC-00EKuNre0kDt1" title="OpenStreetMap" alt="OpenStreetMap"></a><div class="esriBasemapGalleryLabelContainer"><span alt="OpenStreetMap" title="OpenStreetMap">OpenStreetMap</span></div></div><div id="galleryNode_basemap_1" class="esriBasemapGalleryNode"><a href="javascript:void(0);"><img class="esriBasemapGalleryThumbnail" src="https://www.arcgis.com/sharing/rest/content/items/931d892ac7a843d7ba29d085e0433465/info/thumbnail/usa_topo.jpg?token=TjFmE8-8u4js7j9xDzQscMkXMzIHBQXDooU3fl_u7uzUpaPvsX4OoGpRTq1pI3UXCTxS7MYqABLnsm1WwXvwBvqbqrQTKH_MjITN2fE86MMK3VN1fZgCCw1XpClo9u2gBYNkyBfm4eGEUGxTw8ny5gTpLKBdF_QA_CQh0RYMt6d-S5wSzC-00EKuNre0kDt1" title="USA Topo Maps" alt="USA Topo Maps"></a><div class="esriBasemapGalleryLabelContainer"><span alt="USA Topo Maps" title="USA Topo Maps">USA Topo Maps</span></div></div><div id="galleryNode_basemap_0" class="esriBasemapGalleryNode"><a href="javascript:void(0);"><img class="esriBasemapGalleryThumbnail" src="https://www.arcgis.com/sharing/rest/content/items/6d9fa6d159ae4a1f80b9e296ed300767/info/thumbnail/thumbnail.jpeg?token=TjFmE8-8u4js7j9xDzQscMkXMzIHBQXDooU3fl_u7uzUpaPvsX4OoGpRTq1pI3UXCTxS7MYqABLnsm1WwXvwBvqbqrQTKH_MjITN2fE86MMK3VN1fZgCCw1XpClo9u2gBYNkyBfm4eGEUGxTw8ny5gTpLKBdF_QA_CQh0RYMt6d-S5wSzC-00EKuNre0kDt1" title="USGS National Map" alt="USGS National Map"></a><div class="esriBasemapGalleryLabelContainer"><span alt="USGS National Map" title="USGS National Map">USGS National Map</span></div></div><br style="clear: both;"></div>
+</div></div></div></div><div class="page hide" id="page_print"><div class="pageContent shadow small" id="pageContent_print" tabindex="-1" role="dialog" aria-label="print" aria-live="polite"><header id="pageHeader_print" aria-labelledby="pagetitle_print" class="pageHeader bg"><h3 class="pageTitle fc" aria-label="print" id="pagetitle_print">Print</h3><div class="pageHeaderImg" title="print" role="presentation"><span aria-hidden="true" class="pageIcon icon-color icon-print" style="color: rgb(255, 255, 255);"></span></div><button class="pageNav pageClose" role="button" name="print" id="close_print" aria-label="Close print" title="Close print"></button><button class="pageNav pageUp" role="button" aria-label="Previous" title="Previous"></button><button class="pageNav pageDown" role="button" aria-label="Next" title="Next"></button></header><div class="pageBody" tabindex="0" title="print" id="pageBody_print" style="height: 90px;"><input id="print_title" class="printTitle" tabindex="0" role="textbox" type="text" aria-label="Add custom title" placeholder="Add custom title"><div class="esriPrint"><table class="dijit dijitReset dijitInline dijitLeft dijitComboButton esriPrintButton" cellspacing="0" cellpadding="0" role="presentation" id="dijit_form_ComboButton_0" widgetid="dijit_form_ComboButton_0"><tbody role="presentation"><tr role="presentation"><td class="dijitReset dijitStretch dijitButtonNode" data-dojo-attach-point="buttonNode" data-dojo-attach-event="ondijitclick:__onClick,onkeydown:_onButtonKeyDown"><div id="dijit_form_ComboButton_0_button" class="dijitReset dijitButtonContents" data-dojo-attach-point="titleNode" role="button" aria-labelledby="dijit_form_ComboButton_0_label" tabindex="0"><div class="dijitReset dijitInline dijitIcon dijitNoIcon" data-dojo-attach-point="iconNode" role="presentation"></div><div class="dijitReset dijitInline dijitButtonText" id="dijit_form_ComboButton_0_label" data-dojo-attach-point="containerNode" role="presentation">Print</div></div></td><td id="dijit_form_ComboButton_0_arrow" class="dijitReset dijitRight dijitButtonNode dijitArrowButton dijitDownArrowButton" data-dojo-attach-point="_popupStateNode,focusNode,_buttonNode" data-dojo-attach-event="onkeydown:_onArrowKeyDown" title="" role="button" aria-haspopup="true" tabindex="0" style="user-select: none;"><div class="dijitReset dijitArrowButtonInner" role="presentation"></div><div class="dijitReset dijitArrowButtonChar" role="presentation">▼</div></td><td style="display:none !important;"><input type="button" value="" data-dojo-attach-point="valueNode" class="dijitOffScreen" aria-hidden="true" data-dojo-attach-event="onclick:_onClick"></td></tr></tbody></table></div></div></div></div><div class="page hide" id="page_share"><div class="pageContent shadow medium" id="pageContent_share" tabindex="-1" role="dialog" aria-label="share" aria-live="polite"><header id="pageHeader_share" aria-labelledby="pagetitle_share" class="pageHeader bg"><h3 class="pageTitle fc" aria-label="share" id="pagetitle_share">Share</h3><div class="pageHeaderImg" title="share" role="presentation"><span aria-hidden="true" class="pageIcon icon-color icon-share"></span></div><button class="pageNav pageClose" role="button" name="share" id="close_share" aria-label="Close share" title="Close share"></button><button class="pageNav pageUp" role="button" aria-label="Previous" title="Previous"></button></header><div class="ShareDialog pageBody" id="pageBody_share" title="Parking Structure" widgetid="pageBody_share">
+    <div data-dojo-attach-point="_dialogNode">
+    <div class="dialog-content">
+        <div class="share-dialog-subheader">Share this map</div>
+        <div class="icon-container">
+            <button role="button" class="icon-facebook-squared share-dialog-icon" data-dojo-attach-point="_facebookButton" title="Facebook"></button>
+            <button role="button" class="icon-twitter share-dialog-icon" data-dojo-attach-point="_twitterButton" title="Twitter"></button>
+            <button role="button" class="icon-gplus share-dialog-icon" data-dojo-attach-point="_gpulsButton" title="Google Plus"></button>
+            <button role="button" class="icon-mail-alt share-dialog-icon" data-dojo-attach-point="_emailButton" title="Email"></button>
+            <div class="icon-clear"></div>
+        </div>
+        <div class="share-dialog-extent">
+            <input role="checkbox" checked="" id="pageBody_share_extent_checkbox" data-dojo-attach-point="_extentInput" type="checkbox" class="share-dialog-checkbox"> <label for="pageBody_share_extent_checkbox" tabindex="0" class="share-dialog-checkbox"> Share current map view </label>
+        </div>
+        <div class="share-dialog-subheader">Map Link</div>
+        <input id="shareField" class="share-map-url" label="Map Link" aria-label="Map Link" type="text" data-dojo-attach-point="_shareMapUrlText" readonly="">
+        <!--Trigger -->
+        <button class="share-btn" data-clipboard-target="#shareField" data-dojo-attach-point="_shareButton">
+          <img class="clippy" src="images/clippy.svg" alt="Copy short url to clipboard" title="Copy short url to clipboard">
+        </button>
+        <div class="embed-page hide">
+            <div class="share-dialog-subheader">Embed Map</div>
+            <textarea data-dojo-attach-point="_embedNode" aria-label="Embed Map" rows="5" cols="33" readonly="" class="share-dialog-textarea"></textarea>
+            <div class="map-size-container">
+                <div class="map-size-label">Size (width/height):</div>
+                <div class="embed-map-size-dropdown">
+                    <select tabindex="0" data-dojo-attach-point="_comboBoxNode"><option value="0">100% x 640px</option><option value="1">100% x 480px</option><option value="2">100% x 320px</option><option value="3">800px x 600px</option><option value="4">640px x 480px</option><option value="5">480px x 320px</option></select>
+                </div>
+                <div class="embed-map-size-clear"></div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div></div></div></div>
+      <div class="pageContent shadow medium panelPopup" tabindex="0" role="button" id="pageContent_popup">
+        <div id="pageHeader_popup" class="popupHeader bg">
+          <div class="popupTitle fc">
+            <div id="popupTitle"></div>
+            <button id="popupButtonPrev" role="button" class="popupButton prev icon-color" style="color: rgb(255, 255, 255);"></button>
+            <button id="popupButtonNext" role="button" class="popupButton next icon-color" style="color: rgb(255, 255, 255);"></button>
+            <button id="popupButtonClose" role="button" class="popupButton close icon-color" style="color: rgb(255, 255, 255);"></button>
+          </div>
+        </div>
+        <div class="pageBody bg" id="pageBody_popup">
+          <div id="popupContainer" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'" class="dijitContentPane popupContent" widgetid="popupContainer"></div>
+          <div id="popupFooter"></div>
+        </div>
+      </div>
+    </div>
+    <!--Modal Splash Screen-->
+    <div id="modal" class="hide dialog-modal" aria-labelledby="modalTitle" aria-describedby="modalContent" role="dialog" tabindex="-1">
+      <div class="modal-content">
+        <header class="modal-header bg fc">
+          <h2 id="modalTitle" class="dialog-modal"></h2>
+        </header>
+        <div class="copy">
+          <div id="modalContent" class="dialog-modal"></div>
+          <input id="closeOverlay" class="dialog-modal bg fc" type="button">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/esri/nls/jsapi_en-us.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/esri/layers/VectorTileLayerImpl.js"></script><script type="text/javascript" charset="utf-8" src="/apps/View/config/templateConfig.js"></script><script type="text/javascript" charset="utf-8" src="/apps/View/js/template.js"></script><script type="text/javascript" charset="utf-8" src="/apps/View/js/main.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/dijit/layout/BorderContainer.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/dojox/gfx/svg.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/esri/arcgis/Portal.js"></script><script type="text/javascript" charset="utf-8" src="/apps/View/config/defaults.js"></script><script type="text/javascript" charset="utf-8" src="/apps/View/js/toolbar.js"></script><script type="text/javascript" charset="utf-8" src="/apps/View/js/has-config.js"></script><script type="text/javascript" charset="utf-8" src="/apps/View/js/MapUrlParams.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/esri/dijit/HomeButton.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/esri/dijit/LocateButton.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/esri/dijit/Legend.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/esri/dijit/BasemapGallery.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/esri/dijit/Measurement.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/esri/dijit/OverviewMap.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/esri/dijit/LayerList.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/dijit/layout/LayoutContainer.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/dojox/gfx/filters.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/dojox/gfx/svgext.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/esri/tasks/ProjectParameters.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/esri/layers/ArcGISImageServiceLayer.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/esri/virtualearth/VETiledLayer.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/esri/promiseList.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/dijit/layout/_LayoutWidget.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/esri/layers/nls/VectorTileLayerImpl_en-us.js"></script><script type="text/javascript" charset="utf-8" src="/apps/View/js/nls/resources.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/esri/dijit/Search.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/esri/tasks/locator.js"></script><script type="text/javascript" charset="utf-8" src="/apps/View/js/SearchSources.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/dijit/form/HorizontalSlider.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/dijit/form/HorizontalRuleLabels.js"></script><script type="text/javascript" charset="utf-8" src="/apps/View/js/PrintConfig.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/esri/dijit/Print.js"></script><script type="text/javascript" charset="utf-8" src="/apps/View/js/ShareDialog.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/esri/tasks/AddressCandidate.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/dojo/dnd/move.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/dijit/form/HorizontalRule.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/esri/tasks/PrintTemplate.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/esri/tasks/PrintTask.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/esri/tasks/PrintParameters.js"></script><script type="text/javascript" charset="utf-8" src="/apps/View/js/nls/ShareDialog.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/esri/styles/basic.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/esri/tasks/Geoprocessor.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/dojox/gfx/canvas.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/dojox/json/query.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/esri/tasks/LegendLayer.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/esri/tasks/JobInfo.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/esri/tasks/GPMessage.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/esri/tasks/LinearUnit.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/esri/tasks/DataFile.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/esri/tasks/RasterData.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/esri/tasks/Date.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/esri/tasks/ParameterValue.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/esri/tasks/GPResultImageLayer.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/3.22/dojox/main.js"></script><script type="text/javascript">
+    var package_path = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
+    var dojoConfig = {
+      async: true,
+      // The locationPath logic below may look confusing but all its doing is
+      // enabling us to load the api from a CDN and load local modules from the correct location.
+      packages: [{
+        name: "application",
+        location: package_path + '/js'
+      }, {
+        name: "config",
+        location: package_path + '/config'
+      }, {
+        name: "arcgis_templates",
+        location: package_path + '/..'
+      }]
+    };
+    // Have to handle a locale parameter before dojo is loaded
+    var locale = getQueryVariable("locale");
+    if (locale) {
+      dojoConfig.locale = locale;
+    }
+
+    function getQueryVariable(param) {
+      var query = window.location.search.substring(1);
+      var vars = query.split("&");
+      for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split("=");
+        if (pair[0] == param) {
+          return pair[1];
+        }
+      }
+      return (false);
+    }
+  </script>
+  <script type="text/javascript" src="https://js.arcgis.com/3.22/"></script>
+  <script type="text/javascript">
+    require([
+      "config/templateConfig",
+      "dojo/parser",
+      "application/template",
+      "application/main",
+      "dijit/layout/ContentPane",
+      "dijit/layout/BorderContainer"
+    ], function (
+      templateConfig,
+      parser,
+      Template,
+      Main
+    ) {
+      parser.parse();
+      // create the template. This will take care of all the logic required for template applications
+      var myTemplate = new Template(templateConfig);
+      // create my main application. Start placing your logic in the main.js file.
+      var myApp = new Main();
+      // start template
+      myTemplate.startup().then(function (config) {
+        // The config object contains the following properties: helper services, (optionally)
+        // i18n, appid, webmap and any custom values defined by the application.
+        // In this example we have one called theme.
+        myApp.startup(config);
+      }, function (error) {
+        // something went wrong. Let's report it.
+        myApp.reportError(error);
+      });
+    });
+  </script>
+
+
+<div class="dijitDialog" role="dialog" aria-labelledby="dijit_Dialog_0_title" id="dijit_Dialog_0" widgetid="dijit_Dialog_0" style="display: none; position: absolute;">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="dijit_Dialog_0_title" role="heading" level="1">Share</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Cancel" role="button" tabindex="-1">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Cancel">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent"></div>
+	
+</div></body></html>
