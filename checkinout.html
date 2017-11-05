@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html><head>
+        <title>Lost and Found</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="css/index.css">
+        <script src="js/jquery.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/30/13/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/30/13/util.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/30/13/stats.js"></script></head>
+    <body>
+        <nav>Checking Out...</nav>
+        <main>
+            <tab-section id="checkin-tab-section" class="">
+                <div id="map-outer">
+                    <img id="map-loading" src="img/loading.svg" style="display: none;">
+                    <div id="map"></div>
+                </div>
+            </tab-section>
+            <tab-section id="checkout-tab-section" class="active">
+                <form id="checkout-form">
+            
+                    <h2>List Your Information</h2>
+                    <label>Location: </label>
+                    <textarea id="Location" placeholder="Gilman Parking Structure..."></textarea>
+                    <label>Time: </label>
+                    <input id="Time" type="text" placeholder="15:00..">
+                    
+                    <button type="submit">Submit</button>
+                </form>
+            </tab-section>
+        </main>
+        <footer>
+            <tab id="checkin-tab" class="">Check in</tab>
+            <tab id="checkout-tab" class="active">Check Out</tab>
+        </footer>
+        <script>
+            var map;
+            
+            function initMap() {
+                $("#map-loading").fadeOut();
+                getGeoPosition(function (pos) {
+                    map = new google.maps.Map(document.getElementById("map"), {
+                        zoom: 15,
+                        center: pos
+                    });
+                    var marker = new google.maps.Marker({
+                        position: pos,
+                        icon: "img/self.png",
+                        map: map
+                    });
+                    loadLost();
+                });
+            }
+            
+            function loadLost() {
+                // TODO: Load the lost panel
+            }
+            
+            function postFound() {
+                var name, description;
+                if ((name = $("#Location").val()) == "") {
+                    alert("Please insert the location information");
+                }
+                if ((description = $("#Time").val()) == "") {
+                    alert("Please insert the check out time");
+                }
+                randomClosePosition(function (pos) {
+                    // TODO: Post the information
+                });
+            }
+            
+            function getGeoPosition(callback) {
+                // TODO: Try to get geolocation and put the result back to
+                // callback in the form of
+                //  {
+                //      lat: <LATITUDE>,
+                //      lng: <LONGITUDE>
+                //  }
+            }
+            
+            function randomClosePosition(callback) {
+                getGeoPosition(function (pos) {
+                    pos.lat += -0.01 + Math.random() * 0.02;
+                    pos.lng += -0.01 + Math.random() * 0.02;
+                    callback(pos);
+                });
+            }
+        </script>
+        <script src="js/index.js"></script>
+        <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0WRQl-Hgot5KsHhaHU9zLo4SgK5nL6M4&amp;callback=initMap"></script>
+    
+
+</body></html>
